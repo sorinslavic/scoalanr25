@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	
+	<title>Scoala Gimnaziala nr. 25</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	
+	<link href="css/css.css" rel="stylesheet" type="text/css"></link>
+	
+	<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="js/header.js"></script>
+	<script type="text/javascript" src="js/footer.js"></script>
+	
+	<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
+	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />
+	
+	<script type="text/javascript">	
+	function getPageName() {
+		return "Grădiniţă";
+	}
+	
+	function getPageIcon() {
+		return '<img src="images/gradinita-header.png" alt="Gradinita" title="Gradinita" border="0" style="height:44px;"></img>';
+	}
+	
+	$(document).ready(function() {
+		$('.grouped_elements').fancybox({
+			openEffect  : 'elastic',
+			closeEffect : 'elastic',
+
+			prevEffect : 'fade',
+			nextEffect : 'fade',
+			
+			helpers : {
+				title : {
+					type : 'inside'
+				}
+			},
+	
+			afterLoad : function() {
+				this.title = 'Imaginea ' + (this.index + 1) + ' din ' + this.group.length + (this.title ? ' - ' + this.title : '');
+			}
+		});
+	});
+	</script>
+
+</head>
+<body>
+	
+	<div id="page">
+		<div id="header">
+		</div>
+		<div class="headerFooterSeparator"></div>
+		<div id="main">
+			<div id="content" class="fullPage">
+				<div id="maincontent" class="gradient3">
+					<table border="0" cellspacing="5" cellpadding="5">
+						<tr style="height:15px">
+							<td>
+								<h3>Grădiniţă</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td>												
+											<div class="gallery">
+												<div class="galleryimg">
+													<a class="grouped_elements" rel="group1" href="galerie/full/grad1.jpg"><img src="galerie/thumb/grad1.jpg" alt=""/></a>
+												</div>
+												<div class="galleryimg">
+													<a class="grouped_elements" rel="group1" href="galerie/full/grad2.jpg"><img src="galerie/thumb/grad2.jpg" alt=""/></a>
+												</div>
+												<div class="galleryimg">
+													<a class="grouped_elements" rel="group1" href="galerie/full/grad3.jpg"><img src="galerie/thumb/grad3.jpg" alt=""/></a>
+												</div>
+												<div class="galleryimg">
+													<a class="grouped_elements" rel="group1" href="galerie/full/grad4.jpg"><img src="galerie/thumb/grad4.jpg" alt=""/></a>
+												</div>
+												<div class="galleryimg">
+													<a class="grouped_elements" rel="group1" href="galerie/full/grad5.jpg"><img src="galerie/thumb/grad5.jpg" alt=""/></a>	
+												</div>
+												<div class="galleryimg">
+													<a class="grouped_elements" rel="group1" href="galerie/full/grad6.jpg"><img src="galerie/thumb/grad6.jpg" alt=""/></a>
+												</div>
+												<div class="galleryimg">
+													<a class="grouped_elements" rel="group1" href="galerie/full/grad7.jpg"><img src="galerie/thumb/grad7.jpg" alt=""/></a>
+												</div>
+												<div class="galleryimg">
+													<a class="grouped_elements" rel="group1" href="galerie/full/grad8.jpg"><img src="galerie/thumb/grad8.jpg" alt=""/></a>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr style="height: 15px;">
+							<td>
+							</td>
+						</tr>
+						<tr style="height:15px">
+							<td>
+								<table border="0" cellspacing="0" cellpadding="0" style="height:15px">
+									<tr style="height:15px">
+										<td>
+											<h3>Documente</h3>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding: 5px; padding-left: 10px;">
+								<h4>
+									<span style="color: #00dd00; font-size: 8pt;"> <b>NOU</b> </span> <em> 16 Mai 2013</em> - Pentru a vizualiza <font color="ff0000">Actele necesare înscrierii</font> accesaţi acest <a id="plan" href="files/acte_necesare.pdf" target="_blank">link</a>. <br />
+									<span style="color: #00dd00; font-size: 8pt;"> <b>NOU</b> </span> <em> 16 Mai 2013</em> - Pentru a vizualiza <font color="ff0000">Criteriile generale şi specifice</font> accesaţi acest <a id="plan" href="files/criterii_generale_si_specifice.pdf" target="_blank">link</a>. <br />
+									<span style="color: #00dd00; font-size: 8pt;"> <b>NOU</b> </span> <em> 16 Mai 2013</em> - Pentru a vizualiza <font color="ff0000">Perioada de înscriere</font> accesaţi acest <a id="plan" href="files/perioada_inscriere.pdf" target="_blank">link</a>. <br />
+									<br />
+								</h4>
+							</td>
+						</tr>
+						<tr style="height: 8px;">
+							<td>
+							</td>
+						</tr>
+					</table>					
+				</div>
+			</div>
+		</div>
+		<div class="headerFooterSeparator"></div>
+		<div id="footer">
+		</div>
+	</div>
+</body>
+</html>

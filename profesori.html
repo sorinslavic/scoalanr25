@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	
+	<title>Scoala Gimnaziala nr. 25</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+			
+	<link href="css/css.css" rel="stylesheet" type="text/css"></link>
+	
+	<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="js/header.js"></script>
+	<script type="text/javascript" src="js/footer.js"></script>
+	
+	<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
+	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />
+		
+	<script type="text/javascript">	
+	function getPageName() {
+		return "Profesori";
+	}
+	
+	function getPageIcon() {
+		return '<img src="images/profesori-header.png" alt="Profesori" title="Profesori" border="0" style="height:44px;"></img>';
+	}
+	
+	function profesori() {
+		$('#tabel-educatori').hide();
+		$('#tabel-invatatori').hide();
+		$('#prof').css("text-decoration", "underline");
+		$('#edu').css("text-decoration", "none");
+		$('#inv').css("text-decoration", "none");
+		$('#tabel-profesori').show();
+	}
+
+	function invatatori() {
+		$('#tabel-educatori').hide();
+		$('#tabel-profesori').hide();
+		$('#inv').css("text-decoration", "underline");
+		$('#edu').css("text-decoration", "none");
+		$('#prof').css("text-decoration", "none");
+		$('#tabel-invatatori').show();
+	}
+	
+	function educatori() {
+		$('#tabel-invatatori').hide();
+		$('#tabel-profesori').hide();
+		$('#edu').css("text-decoration", "underline");
+		$('#inv').css("text-decoration", "none");
+		$('#prof').css("text-decoration", "none");
+		$('#tabel-educatori').show();
+	}
+	
+	$(document).ready(function() {
+		$('.grouped_elements').fancybox({
+			openEffect  : 'elastic',
+			closeEffect : 'elastic',
+
+			prevEffect : 'fade',
+			nextEffect : 'fade',
+			
+			helpers : {
+				title : {
+					type : 'inside'
+				}
+			},
+	
+			afterLoad : function() {
+				this.title = 'Imaginea ' + (this.index + 1) + ' din ' + this.group.length + (this.title ? ' - ' + this.title : '');
+			}
+		});
+		
+		$('#organigrama').fancybox();
+	});
+	</script>
+
+</head>
+<body>
+	
+	<div id="page">
+		<div id="header">
+		</div>
+		<div class="headerFooterSeparator"></div>
+		<div id="main">
+			<div id="content" class="fullPage">
+				<div id="maincontent"class="gradient3">
+					<table width="100%" border="0">
+						<tr>
+							<td valign="top" height="500px" width="650px">
+								<table border="0" cellspacing="5" cellpadding="5">
+									<tr style="height:15px">
+										<td>
+											<table>
+												<tr>
+													<td onclick="javascript: profesori();" onmouseover="this.style.cursor = 'pointer'; this.style.cursor='hand';">
+														<h3 id="prof" style="text-decoration:underline">Profesori</h3>
+													</td>
+													<td style="padding-left: 10px; padding-right: 10px;">
+														<h3>|</h3>
+													</td>
+													<td onclick="javascript: invatatori();" onmouseover="this.style.cursor = 'pointer'; this.style.cursor='hand';">
+														<h3 id="inv" style="text-decoration:none">Învăţători</h3>
+													</td>
+													<td style="padding-left: 10px; padding-right: 10px;">
+														<h3>|</h3>
+													</td>
+													<td onclick="javascript: educatori();" onmouseover="this.style.cursor = 'pointer'; this.style.cursor='hand';">
+														<h3 id="edu" style="text-decoration:none">Educatori</h3>
+													</td>
+												</tr>
+											</table>											
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div id="tabel-profesori">
+												<table class="table" style="font-size: 12px" cellspacing="4" cellpadding="3">
+													<tr>
+														<th width="20px">&nbsp;</th>
+														<th width="200px">Nume şi Prenume</th>
+														<th width="160px">Materie predată</th>
+														<th width="120px">Poziţie</th>
+														<th width="60px">Dirigenţie</th>
+													</tr>
+													
+													<tr>
+														<td align="center">1</td>
+														<td>Stoian Mihaela</td>
+														<td></td>
+														<td>Director</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center">2</td>
+														<td>Baciu Nicoleta</td>
+														<td>Limba Română</td>
+														<td>&nbsp;</td>
+														<td align="center">VI A</td>
+													</tr>
+													<tr>
+														<td align="center">3</td>
+														<td>Mocanu Diana</td>
+														<td>Limba Română</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center">4</td>
+														<td>Negoi Lavinia</td>
+														<td>Limba Franceză</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center">5</td>
+														<td>Prîşcoveanu Cristina</td>
+														<td>Limba Engleză</td>
+														<td>&nbsp;</td>
+														<td align="center">VII A</td>
+													</tr>
+													<tr>
+														<td align="center">6</td>
+														<td>Buriu Elvira</td>
+														<td>Limba Latină</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center">7</td>
+														<td>Tăbîrță Elena</td>
+														<td>Matematică</td>
+														<td>&nbsp;</td>
+														<td align="center">VIII A</td>
+													</tr>
+													<tr>
+														<td align="center">8</td>
+														<td>Slavic Florina</td>
+														<td>Matematică</td>
+														<td>&nbsp;</td>
+														<td align="center">V</td>
+													</tr>									
+													<tr>
+														<td align="center">9</td>
+														<td>Popescu Marin</td>
+														<td>Biologie</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>							
+													<tr>
+														<td align="center">10</td>
+														<td>Voicu Paul</td>
+														<td>Fizică</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>									
+													<tr>
+														<td align="center">11</td>
+														<td>Ciocoiu Cristina</td>
+														<td>Chimie</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>									
+													<tr>
+														<td align="center">12</td>
+														<td>Tetecu Claudia</td>
+														<td>Geografie</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>									
+													<tr>
+														<td align="center">13</td>
+														<td>Chiriţă Ştefania Mădălina</td>
+														<td>Istorie</td>
+														<td>&nbsp;</td>
+														<td align="center">VII B</td>
+													</tr>									
+													<tr>
+														<td align="center">14</td>
+														<td>Andrei Valentina</td>
+														<td>Educaţie Civică</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center">15</td>
+														<td>Moise Florin</td>
+														<td>Religie</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center">16</td>
+														<td>Stănescu Mihaela</td>
+														<td>Desen</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center">17</td>
+														<td>Cernătescu Cătălin</td>
+														<td>Muzică</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center">18</td>
+														<td></td>
+														<td>Educaţie Fizică</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td align="center">19</td>
+														<td>Mihail</td>
+														<td>Educaţie Fizică</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+
+													<tr>
+														<td align="center">20</td>
+														<td>Crăivan Ana</td>
+														<td>TIC</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>													
+													<tr>
+														<td align="center">21</td>
+														<td>Filipoaia Duţa</td>
+														<td>Educaţie Tehnologică</td>
+														<td>&nbsp;</td>
+														<td>&nbsp;</td>
+													</tr>
+												</table>
+											</div>
+											<div id="tabel-invatatori" style="display: none;">
+												<table class="table" style="font-size: 12px" cellspacing="4" cellpadding="3">
+													<tr>
+														<th width="20px">&nbsp;</th>
+														<th width="240px">Nume şi Prenume</th>
+														<th width="120px">Clasă</th>
+													</tr>
+													
+													<tr>
+														<td align="center">1</td>
+														<td>Antohe Mihaela <a href="files/cv/CV-Antohe-Mihaela.pdf" style="float: right;" target="_blank"><img src="images/cv_icon.gif" alt="CV" title="CV" style="height: 16px"/></a></td>
+														<td>Pregătitoare</td>
+													</tr>
+													<tr>
+														<td align="center">2</td>
+														<td>Hrubaru Margareta</td>
+														<td>III A</td>
+													</tr>
+													<tr>
+														<td align="center">3</td>
+														<td>Mihalache Viotela Florina</td>
+														<td>II A</td>
+													</tr>
+													<tr>
+														<td align="center">4</td>
+														<td>Marin Ecaterina</td>
+														<td>I A</td>
+													</tr>
+													<tr>
+														<td align="center">5</td>
+														<td>Bărbulescu Alexandra</td>
+														<td>II B</td>
+													</tr>
+													<tr>
+														<td align="center">6</td>
+														<td>Ion</td>
+														<td>IV A</td>
+													</tr>
+													<tr>
+														<td align="center">7</td>
+														<td>Ţigău Georgeta</td>
+														<td>IV B</td>
+													</tr>
+												</table>
+											</div>
+											<div id="tabel-educatori" style="display: none;">
+												<table class="table" style="font-size: 12px" cellspacing="4" cellpadding="3">
+													<tr>
+														<th width="20px">&nbsp;</th>
+														<th width="240px">Nume şi Prenume</th>
+													</tr>
+													
+													<tr>
+														<td align="center">1</td>
+														<td>Bănică Georgeta</td>
+													</tr>
+													<tr>
+														<td align="center">2</td>
+														<td>Anastasiu Maria</td>
+													</tr>
+													<tr>
+														<td align="center">3</td>
+														<td>Bărbulescu Dumitra</td>
+													</tr>
+													<tr>
+														<td align="center">4</td>
+														<td>Păunescu Paraschiva</td>
+													</tr>
+													<tr>
+														<td align="center">5</td>
+														<td>Soare Maria</td>
+													</tr>
+													<tr>
+														<td align="center">6</td>
+														<td>Sârbu Diana</td>
+													</tr>
+													<tr>
+														<td align="center">7</td>
+														<td>Cincă Valeria</td>
+													</tr>
+													<tr>
+														<td align="center">8</td>
+														<td>Iordan Livia</td>
+													</tr>
+													<tr>
+														<td align="center">9</td>
+														<td>Mocanu Georgiana</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td valign="top">
+								<table border="0" cellspacing="5" cellpadding="5">
+									<tr style="height:15px">
+										<td>											
+											<table>
+												<tr>
+													<td>
+														<h3>Secretariat</h3>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<table border="0" cellspacing="3" cellpadding="3">
+												<tr>
+													<td>
+														<h4>Bălașa Irina</h4>
+														<h4>Şerban Lavinia</h4>
+													</td>
+												</tr>
+											</table>
+											<table border="0" cellspacing="3" cellpadding="3">
+												<tr>
+													<td style="padding-left: 8px;">												
+														<p>Program cu publicul: Luni - Vineri: 8:00 - 16:00</p>
+														<p>Nr fax: 021 242 26 95</p>
+														<p>Nr tel: 021 242 26 95</p>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+								<table border="0" cellspacing="5" cellpadding="5">
+									<tr style="height:15px">
+										<td>
+											<h3>Bibliotecă</h3>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<table border="0" cellspacing="3" cellpadding="3">
+												<tr>
+													<td>
+														<h4>Bibliotecar: Costache Ana</h4>
+													</td>
+												</tr>
+											</table>
+											<table border="0" cellspacing="0" cellpadding="0">
+												<tr>
+													<td>												
+														<div class="gallery">
+															<div class="galleryimg">
+																<a class="grouped_elements" rel="group1" href="galerie/full/biblioteca1.jpg"><img src="galerie/thumb/biblioteca1.jpg" alt=""/></a>
+															</div>
+															<div class="galleryimg">
+																<a class="grouped_elements" rel="group1" href="galerie/full/biblioteca2.jpg"><img src="galerie/thumb/biblioteca2.jpg" alt=""/></a>
+															</div>
+															<div class="galleryimg">
+																<a class="grouped_elements" rel="group1" href="galerie/full/biblioteca3.jpg"><img src="galerie/thumb/biblioteca3.jpg" alt=""/></a>
+															</div>
+															<div class="galleryimg">
+																<a class="grouped_elements" rel="group1" href="galerie/full/biblioteca4.jpg"><img src="galerie/thumb/biblioteca4.jpg" alt=""/></a>
+															</div>
+															<div class="galleryimg">
+																<a class="grouped_elements" rel="group1" href="galerie/full/biblioteca5.jpg"><img src="galerie/thumb/biblioteca5.jpg" alt=""/></a>
+															</div>
+															<div class="galleryimg">
+																<a class="grouped_elements" rel="group1" href="galerie/full/biblioteca6.jpg"><img src="galerie/thumb/biblioteca6.jpg" alt=""/></a>
+															</div>
+															<div class="galleryimg">
+																<a class="grouped_elements" rel="group1" href="galerie/full/biblioteca7.jpg"><img src="galerie/thumb/biblioteca7.jpg" alt=""/></a>
+															</div>
+															<div class="galleryimg">
+																<a class="grouped_elements" rel="group1" href="galerie/full/biblioteca8.jpg"><img src="galerie/thumb/biblioteca8.jpg" alt=""/></a>
+															</div>
+															<div class="galleryimg">
+																<a class="grouped_elements" rel="group1" href="galerie/full/biblioteca9.jpg"><img src="galerie/thumb/biblioteca9.jpg" alt=""/></a>
+															</div>
+															<div class="galleryimg">
+																<a class="grouped_elements" rel="group1" href="galerie/full/biblioteca10.jpg"><img src="galerie/thumb/biblioteca10.jpg" alt=""/></a>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+								<table border="0" cellspacing="5" cellpadding="5">
+									<tr style="height:15px">
+										<td>
+											<h3>Organigramă</h3>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding: 5px; padding-left: 10px;">
+											<h4>Pentru a vizualiza organigrama pentru anul 2012 - 2013 accesaţi acest <a id="organigrama" href="galerie/organigrama.png">link</a>. <br />
+											Click <a href="files/Organigrama.pdf" target="_blank">aici</a> pentru a downloada versiunea PDF.
+											</h4>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>					
+				</div>
+			</div>
+		</div>
+		<div class="headerFooterSeparator"></div>
+		<div id="footer">
+		</div>
+	</div>
+</body>
+</html>
