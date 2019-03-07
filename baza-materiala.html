@@ -12,6 +12,11 @@
 	<script type="text/javascript" src="js/header.js"></script>
 	<script type="text/javascript" src="js/footer.js"></script>
 	
+
+	<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
+	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />
+	
+
 	<script type="text/javascript">	
 	function getPageName() {
 		return "Baza materială";
@@ -20,6 +25,27 @@
 	function getPageIcon() {
 		return '<img src="images/bazamateriala-header.png" alt="Baza materiala" title="Baza materiala" border="0" style="height:44px;"></img>';
 	}
+		
+	$(document).ready(function() {
+		$('.grouped_elements').fancybox({
+			openEffect  : 'elastic',
+			closeEffect : 'elastic',
+
+			prevEffect : 'fade',
+			nextEffect : 'fade',
+			
+			helpers : {
+				title : {
+					type : 'inside'
+				}
+			},
+	
+			afterLoad : function() {
+				this.title = 'Imaginea ' + (this.index + 1) + ' din ' + this.group.length + (this.title ? ' - ' + this.title : '');
+			}
+		});
+		
+	});
 	</script>
 
 </head>
@@ -44,7 +70,6 @@
 									<li>1 Laborator Matematică - dotat cu tablă interactivă</li>
 									<li>1 Laborator Geografie - dotat cu tablă interactivă</li>
 									<li>Bază sportivă: teren(handbal, fotbal, baschet), sală de sport</li>
-									<li>Bazin de înot - în curs de amenajare</li>
 									<li>Bibliotecă</li>
 									<li>Sală de lectură</li>
 									<li>Cabinete medicale (medicină internă, stomatologie)</li>
@@ -52,7 +77,21 @@
 								</ul>
 							</td>
 						</tr>
-					</table>					
+					</table>	
+					<h3>Bazin înot</h3>
+					<span> Pagina Facebook: <a href="https://www.facebook.com/bazin.inot.scoala.25/" target="_blank"> Bazinul școlii 25 </a> </span>
+					<div class="gallery">
+						<div class="galleryimg">
+							<a class="grouped_elements" rel="group1" href="galerie/full/bazin1.jpg"><img src="galerie/thumb/bazin1.jpg" alt=""/></a>
+						</div>
+						<div class="galleryimg">
+							<a class="grouped_elements" rel="group1" href="galerie/full/bazin2.jpg"><img src="galerie/thumb/bazin2.jpg" alt=""/></a>
+						</div>
+						<div class="galleryimg">
+							<a class="grouped_elements" rel="group1" href="galerie/full/bazin3.jpg"><img src="galerie/thumb/bazin3.jpg" alt=""/></a>
+						</div>
+					</div>
+					
 				</div>
 			</div>
 		</div>
